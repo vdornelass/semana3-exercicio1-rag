@@ -1,0 +1,32 @@
+## Sobre este documento
+Manual de operações do Porto Alfa. Documento FICTÍCIO e didático, derivado do desafio "Orquestrando o Oceano" (versão 1.1.0-pilot) e simplificado para o curso. Vale apenas para exercícios.
+
+## Frota
+A frota do grupo tem 4 navios, todos partindo do Porto Alfa: S1-FAROL (feeder, tanque de 220 t), S2-MARE (handy, tanque de 280 t), S3-CORAL (supramax, tanque de 340 t) e S4-ATLAS (panamax reduzido, tanque de 400 t). Cada navio tem um porto de destino diferente.
+
+## Rotas e distâncias
+Cada navio pode seguir pela rota direta ou pela rota protegida. A rota direta é mais curta; a protegida é mais longa, mas sofre menos com tempestades e tem uma estação de abastecimento no meio do caminho. Distâncias da rota direta: S1-FAROL 700 nm, S2-MARE 760 nm, S3-CORAL 680 nm, S4-ATLAS 820 nm. Distâncias da rota protegida: S1-FAROL 760 nm, S2-MARE 830 nm, S3-CORAL 745 nm, S4-ATLAS 900 nm.
+
+## Velocidade
+A velocidade-alvo de um navio vai de 0 a 18 nós, em passos de 0,5 nó. A velocidade efetiva muda no máximo 2 nós por tick. Um tick equivale a 10 minutos simulados.
+
+## Cálculo do tempo de viagem
+O tempo estimado de chegada (ETA) em horas é a distância em milhas náuticas dividida pela velocidade em nós. Um tick tem 1/6 de hora, portanto ETA em ticks é o ETA em horas multiplicado por 6.
+
+## Tempestade
+Durante uma tempestade, a velocidade segura na rota direta é de 12 nós e na rota protegida é de 15 nós. Acima desses valores o navio sofre avaria na carga. O navio que está em tempestade não deve navegar acima da velocidade segura da sua rota.
+
+## Combustível e reserva
+Todo navio deve manter uma reserva mínima de combustível de 15% da capacidade do tanque: 33 t para o S1-FAROL, 42 t para o S2-MARE, 51 t para o S3-CORAL e 60 t para o S4-ATLAS. Um navio com combustível abaixo da reserva está em condição insegura e não pode zarpar.
+
+## Abastecimento
+O combustível é comprado em lotes de no mínimo 5 t, sempre em múltiplos de 5 t. A compra só é permitida com o navio parado no Porto Alfa ou na estação da rota protegida. No Porto Alfa, o preço é de D$ 610 por tonelada até o tick 35, D$ 680 do tick 36 ao 71 e D$ 760 do tick 72 ao 95; depois disso o porto fecha para abastecimento. Na estação da rota protegida o preço é de D$ 780 por tonelada.
+
+## Avaria de motor e reparo
+Se o motor do S4-ATLAS falha, o navio deve reduzir a velocidade até parar. O reparo só começa com o navio parado, custa D$ 24.000 e dura 12 ticks. Enquanto o navio não estiver em reparo, a falha gera custo adicional por tick.
+
+## Descarga e prazos
+A descarga no porto de destino dura 12 ticks. Prazos de entrega, contados no fim da descarga: S1-FAROL tick 390, S2-MARE tick 414, S3-CORAL tick 378 e S4-ATLAS tick 426. Atraso reduz a receita.
+
+## Procedimentos de segurança
+Em caso de dúvida, o navio deve reduzir a velocidade (HOLD) em vez de acelerar. SAFE_STOP coloca o navio em parada segura e só pode ser usado com o navio parado. Humanos não emitem comandos aos navios: os comandos são emitidos apenas por agentes autenticados. Humanos podem apenas reiniciar um agente, pedir pausa, pedir diagnóstico ou anotar observações.

@@ -1,0 +1,14 @@
+## Sobre este documento
+Relatório de situação da frota no Porto Alfa, antes da partida. Documento FICTÍCIO e didático, gerado para os exercícios. Cada seção descreve um navio.
+
+## S1-FAROL
+Navio: S1-FAROL. Destino: Porto Norte. Distância até o destino pela rota direta: 700 nm. Velocidade-alvo planejada: 14 nós. Combustível a bordo: 30 t. Reserva mínima de combustível: 33 t. Tempestade na rota: não.
+
+## S2-MARE
+Navio: S2-MARE. Destino: Porto Leste. Distância até o destino pela rota direta: 760 nm. Velocidade-alvo planejada: 16 nós. Combustível a bordo: 100 t. Reserva mínima de combustível: 42 t. Tempestade na rota: sim.
+
+## S3-CORAL
+Navio: S3-CORAL. Destino: Porto Sul. Distância até o destino pela rota direta: 680 nm. Velocidade-alvo planejada: 12 nós. Combustível a bordo: 115 t. Reserva mínima de combustível: 51 t. Tempestade na rota: não.
+
+## S4-ATLAS
+Navio: S4-ATLAS. Destino: Porto Oeste. Distância até o destino pela rota direta: 820 nm. Velocidade-alvo planejada: 14 nós. Combustível a bordo: 145 t. Reserva mínima de combustível: 60 t. Tempestade na rota: sim.
